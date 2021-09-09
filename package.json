@@ -2,13 +2,23 @@
   "name": "game-of-life",
   "version": "1.0.0",
   "description": "A simple game. main author: John Horton Conway",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "start": "lite-server",
+    "watch": "webpack --watch --progress",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "game"
   ],
   "author": "Jakaria Blaine",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
 }
