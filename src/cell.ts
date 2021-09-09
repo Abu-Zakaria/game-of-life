@@ -2,6 +2,7 @@ class Cell
 {
 	id: number;
 	active: boolean = false;
+	next_active: boolean = false;
 
 	constructor(id: number)
 	{

@@ -71,8 +71,37 @@ class Analyzer
 				}
 
 				console.log("analyzed active neighbors:", active_neighbors, cell.id);
+				if(cell.active)
+				{
+					if(active_neighbors < 2 || active_neighbors > 3)
+					{
+						cell.next_active = false;
+					}
+					else
+					{
+						cell.next_active = true;
+					}
+				}
+				else
+				{
+					if(active_neighbors == 3)
+					{
+						cell.next_active = true
+					}
+					else
+					{
+						cell.next_active = false
+					}
+				}
+
+				this.data[i].getCells()[j] = cell;
 			}
 		}
+	}
+
+	getResult(): Row[]
+	{
+		return this.data;
 	}
 }
 

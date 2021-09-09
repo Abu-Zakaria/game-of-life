@@ -28,6 +28,7 @@ class Renderer
 		console.log('>>>', data);
 
 		let container = $('.container');
+		container.html("");
 		for(let i = 0; i < data.length; i++)
 		{
 			let row_div = document.createElement("div")
