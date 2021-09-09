@@ -19,7 +19,8 @@ class Game
 
 	private addRow(id: number): void
 	{
-		this.data.push(new Row(id));
+		let row = new Row(id);
+		this.data.push(row);
 	}
 
 	getData(): Row[]

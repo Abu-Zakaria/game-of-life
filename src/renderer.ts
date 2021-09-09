@@ -35,8 +35,14 @@ class Renderer
 
 			for(let j = 0; j < data[i].getCells().length; j++)
 			{
+				let cell = data[i].getCells()[j];
 				let cell_div = document.createElement("div")
 				$(cell_div).addClass("cell")
+
+				if(cell.active)
+				{
+					$(cell_div).addClass('active');
+				}
 
 				row_div.append(cell_div);
 			}

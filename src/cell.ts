@@ -6,6 +6,7 @@ class Cell
 	constructor(id: number)
 	{
 		this.id = id;
+		this.active = Math.random() > 0.8
 		this.init();
 	}
 
