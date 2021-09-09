@@ -1,0 +1,26 @@
+.container
+{
+	width: 700px;
+	border: 1px solid #ddd;
+	margin: 0 auto;
+	padding: 16px;
+	border-radius: 6px;
+}
+
+.row
+{
+	display: flex;
+	justify-content: center;
+
+	.cell
+	{
+	 	border: 1px solid #ddd;
+	 	margin: 0;
+	 	padding: 10px;
+
+	 	&.active
+	 	{
+	 		background: red;
+	 	}
+	}
+}
