@@ -7,6 +7,8 @@ class Game
 	private data: Row[] = [];
 	private renderer: Renderer;
 	private analyzer: Analyzer;
+	private cyclingLoop;
+	running: boolean = false;
 
 	init(): void
 	{
@@ -16,7 +18,7 @@ class Game
 
 	addStartingData()
 	{
-		for(let i = 1; i <= 5; i++)
+		for(let i = 1; i <= 20; i++)
 		{
 			this.addRow(i)
 		}
@@ -59,11 +61,18 @@ class Game
 
 	startCycle(): void
 	{
+		this.running = true;
 		let _this = this;
 
-		setInterval(() => {
+		this.cyclingLoop = setInterval(() => {
 			_this.processCycle();
-		}, 1000);
+		}, 2000);
+	}
+
+	stopCycle()
+	{
+		this.running = false;
+		clearInterval(this.cyclingLoop);
 	}
 
 	private processCycle(): void
