@@ -16,3 +16,8 @@ $('#start_btn').on('click', () => {
 $('#stop_btn').on('click', () => {
 	game.stopCycle();
 })
+
+$('#reset_btn').on('click', () => {
+	game.stopCycle();
+	game.reset();
+})

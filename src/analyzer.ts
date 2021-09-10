@@ -70,7 +70,6 @@ class Analyzer
 					}
 				}
 
-				console.log("analyzed active neighbors:", active_neighbors, cell.id);
 				if(cell.active)
 				{
 					if(active_neighbors < 2 || active_neighbors > 3)

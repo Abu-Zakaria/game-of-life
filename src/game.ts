@@ -9,6 +9,7 @@ class Game
 	private analyzer: Analyzer;
 	private cyclingLoop;
 	running: boolean = false;
+	delay: number = 100;
 
 	init(): void
 	{
@@ -18,7 +19,7 @@ class Game
 
 	addStartingData()
 	{
-		for(let i = 1; i <= 20; i++)
+		for(let i = 1; i <= 50; i++)
 		{
 			this.addRow(i)
 		}
@@ -33,6 +34,13 @@ class Game
 	getData(): Row[]
 	{
 		return this.data;
+	}
+
+	reset(): void
+	{
+		this.renderer.reset();
+		this.data = [];
+		this.addStartingData();
 	}
 
 	render(): void
@@ -66,7 +74,7 @@ class Game
 
 		this.cyclingLoop = setInterval(() => {
 			_this.processCycle();
-		}, 2000);
+		}, this.delay);
 	}
 
 	stopCycle()

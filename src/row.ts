@@ -15,7 +15,7 @@ class Row
 	{
 		console.log("Row initialized", "id: " + this.id);
 
-		for(let i = 1; i <= 10; i++)
+		for(let i = 1; i <= 60; i++)
 		{
 			this.addCell(i);
 		}

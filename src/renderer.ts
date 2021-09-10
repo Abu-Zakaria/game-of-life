@@ -16,6 +16,11 @@ class Renderer
 		this.game = game;
 	}
 
+	reset(): void
+	{
+		$('.container').html('')
+	}
+
 	render(): void
 	{
 		if(this.game == null)
@@ -25,7 +30,6 @@ class Renderer
 		}
 
 		let data: Row[] = this.game.getData();
-		console.log('>>>', data);
 
 		let container = $('.container');
 		container.html("");
